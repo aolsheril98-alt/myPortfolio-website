@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sheril Aol | ICT Officer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap">
+<style>
+:root{--bg:#0B0714;--card:#140B2B;--line:#2A1B4D;--pink:#FF4FD8;--purple:#A855F7;--teal:#5EEAD4;--text:#EDE7FF;--muted:#B9A5F5;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.7 Sora,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.mono{font-family:"Fira Code",ui-monospace,Consolas,monospace}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:rgba(11,7,20,.92);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+.logo{color:var(--pink);text-shadow:0 0 10px var(--pink);font-size:15px}
+nav ul{display:flex;gap:6px 18px;flex-wrap:wrap;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+nav ul a:hover{color:var(--pink)}
+.hero{padding:64px 0 56px;background:radial-gradient(circle at 85% 15%,rgba(168,85,247,.28),transparent 55%),radial-gradient(circle at 5% 95%,rgba(255,79,216,.18),transparent 50%)}
+.hero .wrap{display:flex;align-items:center;gap:36px;flex-wrap:wrap}
+.avatar{width:170px;height:170px;border-radius:50%;border:2px solid var(--pink);box-shadow:0 0 26px var(--pink),inset 0 0 20px rgba(255,79,216,.4);background:#1A0F33;display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:600;color:#FFD1F5;overflow:hidden;flex:none}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.hero-text{flex:1;min-width:260px}
+.hello{margin:0;color:var(--purple);font-size:14px}
+h1{margin:6px 0;font-size:clamp(36px,7vw,60px);line-height:1.08;font-weight:700;text-shadow:0 0 18px rgba(255,79,216,.65)}
+.role{margin:0 0 20px;font-size:18px;color:#D6C6FF;min-height:1.7em}
+.role b{color:var(--pink);font-weight:500}
+.cursor{display:inline-block;width:2px;height:1.1em;background:var(--pink);vertical-align:-3px;margin-left:2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.btn{display:inline-block;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;margin:0 10px 10px 0}
+.btn.main{background:var(--pink);color:#1A0620;box-shadow:0 0 16px rgba(255,79,216,.7)}
+.btn.alt{border:1px solid var(--purple);color:#D9BEFF;box-shadow:0 0 10px rgba(168,85,247,.5)}
+.btn:hover{transform:translateY(-2px)}
+section{padding:56px 0}
+h2{margin:0 0 24px;font-size:22px;font-weight:600}
+h2::after{content:"";display:block;width:48px;height:3px;margin-top:8px;background:var(--pink);border-radius:2px;box-shadow:0 0 10px var(--pink)}
+.about{display:grid;grid-template-columns:3fr 2fr;gap:28px;align-items:start}
+.about p{margin:0 0 14px;color:#D6C6FF;max-width:62ch}
+.code{background:#120A26;border:1px solid #3C2A6B;border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.8;color:#CDBBFF;overflow-x:auto}
+.k{color:var(--pink)}.s{color:var(--teal)}.b{color:var(--purple)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid #3C2A6B;border-radius:12px;padding:18px}
+.card h3{margin:0 0 10px;font-size:16px;font-weight:600;color:var(--pink)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{border:1px solid var(--purple);color:#D9BEFF;font-size:13px;padding:3px 12px;border-radius:12px;box-shadow:0 0 8px rgba(168,85,247,.35)}
+.card:nth-child(even) .tags span{border-color:var(--teal);color:#B5F7EC;box-shadow:0 0 8px rgba(94,234,212,.3)}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
+.job{position:relative;margin-bottom:28px}
+.job::before{content:"";position:absolute;left:-32px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--pink);box-shadow:0 0 10px var(--pink)}
+.job.p::before{background:var(--purple);box-shadow:0 0 10px var(--purple)}
+.when{font-size:13px;color:var(--pink)}
+.job h3{margin:2px 0 0;font-size:18px;font-weight:600}
+.org{margin:0 0 8px;color:var(--muted);font-size:14px}
+.job ul{margin:0;padding-left:18px;color:#D6C6FF}
+.job li{margin-bottom:4px}
+.edu{border-left:3px solid var(--purple)}
+.proj{border-style:dashed;border-color:var(--pink);min-height:150px}
+.proj:nth-child(2){border-color:var(--purple)}.proj:nth-child(3){border-color:var(--teal)}
+.proj h3{color:var(--text)}
+.proj p{margin:0 0 10px;font-size:14px;color:var(--muted)}
+.proj a{font-size:13px;color:var(--teal)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.contact ul{list-style:none;margin:0;padding:0}
+.contact li{margin-bottom:12px;color:#D6C6FF}
+.contact li span{display:block;font-size:13px;color:var(--purple)}
+.contact a:hover{color:var(--pink)}
+form{display:grid;gap:12px}
+label{font-size:13px;color:var(--muted)}
+input,textarea{width:100%;margin-top:4px;background:#120A26;border:1px solid #3C2A6B;border-radius:8px;padding:10px 12px;color:var(--text);font:inherit;font-size:14px}
+input:focus,textarea:focus{border-color:var(--pink);box-shadow:0 0 10px rgba(255,79,216,.5);outline:none}
+button{justify-self:start;border:0;cursor:pointer;font:inherit}
+footer{border-top:1px solid var(--line);padding:20px 0;text-align:center;font-size:13px;color:var(--muted)}
+.social{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.social a{border:1px solid var(--pink);color:#FFB8EE;font-family:"Fira Code",monospace;font-size:13px;padding:4px 16px;border-radius:20px;box-shadow:0 0 8px rgba(255,79,216,.35)}
+.social a:hover{background:var(--pink);color:#1A0620}
+.cert{border-left:3px solid var(--pink)}
+.cert:nth-child(2){border-left-color:var(--purple)}.cert:nth-child(3){border-left-color:var(--teal)}
+.cert h3{color:var(--text);font-size:16px;margin:2px 0}
+.cert p{margin:0;font-size:14px;color:var(--muted)}
+.edu+.edu{margin-top:16px}
+.edu-t{margin:2px 0;font-size:18px;color:var(--text)}
+.dz{margin-top:14px;border:1px dashed var(--purple);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--muted);text-align:center;cursor:pointer;transition:border-color .2s,background .2s}
+.dz:hover,.dz.over{border-color:var(--pink);background:rgba(255,79,216,.08);color:#FFB8EE}
+.dz ul{list-style:none;margin:8px 0 0;padding:0;text-align:left}
+.dz li a{color:var(--teal);word-break:break-all}
+.dz input{display:none}
+@media(max-width:700px){.about,.contact{grid-template-columns:1fr}.hero{padding-top:40px}.avatar{width:130px;height:130px;font-size:38px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cursor{animation:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo mono" href="#top">&lt;sheril /&gt;</a>
+<ul><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#certs">Certifications</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div class="avatar" role="img" aria-label="Profile photo of Sheril Aol">SA</div>
+<div class="hero-text">
+<p class="hello mono">&gt; hello, world! I’m</p>
+<h1>Sheril Aol</h1>
+<p class="role">ICT officer · <b id="typed">network admin</b><span class="cursor" aria-hidden="true"></span></p>
+<a class="btn main" href="#projects">View my work</a>
+<a class="btn alt" href="#contact">Get in touch</a>
+<div class="social"><a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a><a href="mailto:aolsheril98@gmail.com">Email</a></div>
+</div>
+</div></header>
+
+<section id="about"><div class="wrap">
+<h2>About me</h2>
+<div class="about">
+<div>
+<p>I’m a dedicated, detail-oriented ICT graduate from JOOUST with a strong foundation in network administration, software development, and database management.</p>
+<p>I’ve configured office networks, repaired school devices in the field, and kept records running smoothly. I learn new technologies quickly and work well in a team.</p>
+</div>
+<div class="code mono"><span class="k">const</span> sheril = {<br>&nbsp;&nbsp;role: <span class="s">"ICT Officer"</span>,<br>&nbsp;&nbsp;base: <span class="s">"Nairobi, Kenya"</span>,<br>&nbsp;&nbsp;loves: [<span class="s">"networks"</span>, <span class="s">"code"</span>],<br>&nbsp;&nbsp;learning: <span class="b">true</span><br>};</div>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card"><h3>Programming</h3><div class="tags"><span>HTML/CSS</span><span>Python</span><span>C#</span><span>C++</span><span>.NET</span><span>Java</span></div></div>
+<div class="card"><h3>Networking</h3><div class="tags"><span>LAN/WAN setup</span><span>Network administration</span><span>Network configuration</span></div></div>
+<div class="card"><h3>Data</h3><div class="tags"><span>Database management</span><span>Data entry</span><span>Records management</span></div></div>
+<div class="card"><h3>IT support</h3><div class="tags"><span>Device repair</span><span>Tablets and projectors</span><span>Office equipment</span></div></div>
+<div class="card"><h3>Professional</h3><div class="tags"><span>Project management</span><span>Effective communication</span><span>Teamwork</span></div></div>
+<div class="card"><h3>Languages</h3><div class="tags"><span>English (fluent)</span><span>Kiswahili</span></div></div>
+<div class="card"><h3>Web development</h3><div class="tags"><span>HTML5</span><span>CSS3</span><span>Responsive design</span><span>Website design</span></div></div>
+<div class="card"><h3>Tools</h3><div class="tags"><span>Git and GitHub</span><span>VS Code</span><span>Microsoft Office</span><span>Windows</span></div></div>
+<div class="card"><h3>Troubleshooting</h3><div class="tags"><span>Technical support</span><span>Fault diagnosis</span><span>Problem solving</span></div></div>
+<div class="card"><h3>Personal strengths</h3><div class="tags"><span>Attention to detail</span><span>Time management</span><span>Adaptability</span><span>Fast learner</span></div></div>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<div class="tl">
+<div class="job p">
+<span class="when mono">July 2026 – September 2026</span>
+<h3>Intern</h3><p class="org">Standard Group PLC</p>
+<ul>
+<li>Add your main duties and what you achieved here.</li>
+</ul>
+</div>
+<div class="job">
+<span class="when mono">2023 – 2025</span>
+<h3>Office clerk</h3><p class="org">JOOUST</p>
+<ul>
+<li>Organized and maintained student and staff records so files stayed updated and easy to find.</li>
+<li>Handled photocopiers and scanners, and assisted with data entry for several departments.</li>
+<li>Was the first point of contact for visitors and students, directing them to the right offices.</li>
+<li>Managed incoming and outgoing mail and distributed official memos across the university.</li>
+</ul>
+</div>
+<div class="job p">
+<span class="when mono">2024 – 2025</span>
+<h3>ICT attachment</h3><p class="org">Ministry of Education, sub-county office</p>
+<ul>
+<li>Configured and optimized office networks, keeping LAN/WAN connectivity stable for Ministry staff.</li>
+<li>Visited schools to repair and maintain Digital Literacy Programme (DLP) equipment, including tablets and projectors.</li>
+<li>Compiled statistical records and prepared routine reports for the education office.</li>
+<li>Sorted, filed, and dispatched official correspondence between the sub-county office and local schools.</li>
+<li>Gained hands-on experience in government administrative procedures.</li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<section id="education"><div class="wrap">
+<h2>Education</h2>
+<div class="card edu">
+<span class="when mono">2022 – 2026</span>
+<h3 style="color:var(--text);font-size:18px;margin-top:2px">Bachelor of Science in Information Communication Technology</h3>
+<p class="org" style="margin:0">Jaramogi Oginga Odinga University of Science and Technology (JOOUST)<br>School of Informatics and Innovation</p>
+<div class="dz" tabindex="0" role="button" aria-label="Add university documents">Drop transcripts, certificates or letters here<input type="file" multiple><ul></ul></div>
+</div>
+<div class="card edu">
+<span class="when mono">2018 – 2022</span>
+<h3 class="edu-t">Kenya Certificate of Secondary Education (KCSE)</h3>
+<p class="org" style="margin:0">Missions of Hope Girls High School<br>Mean grade: add your grade here</p>
+<div class="dz" tabindex="0" role="button" aria-label="Add high school documents">Drop your certificate or recommendation letter here<input type="file" multiple><ul></ul></div>
+</div>
+<div class="card edu">
+<span class="when mono">2008 – 2017</span>
+<h3 class="edu-t">Primary education</h3>
+<p class="org" style="margin:0">Missions of Hope Babadogo</p>
+<div class="dz" tabindex="0" role="button" aria-label="Add primary school documents">Drop your certificate or report here<input type="file" multiple><ul></ul></div>
+</div>
+</div></section>
+
+<section id="certs"><div class="wrap">
+<h2>Certifications</h2>
+<div class="grid">
+<div class="card cert"><span class="when mono">Year</span><h3>Certificate name</h3><p>Issuer, for example Cisco, CompTIA, or Google.</p></div>
+<div class="card cert"><span class="when mono">Year</span><h3>Certificate name</h3><p>Add the credential link or ID if you have one.</p></div>
+<div class="card cert"><span class="when mono">In progress</span><h3>Certificate name</h3><p>Courses you’re studying now show you’re still learning.</p></div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card proj"><h3>Project title</h3><p>Replace this with a short description of what you built and the tools you used.</p><a href="#">View on GitHub</a></div>
+<div class="card proj"><h3>Project title</h3><p>Try a network design, a database system, or a website from your coursework.</p><a href="#">View on GitHub</a></div>
+<div class="card proj"><h3>Project title</h3><p>Add a link to the live demo or a screenshot if you have one.</p><a href="#">View live</a></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Contact</h2>
+<div class="contact">
+<ul>
+<li><span class="mono">email</span><a href="mailto:aolsheril98@gmail.com">aolsheril98@gmail.com</a></li>
+<li><span class="mono">phone</span><a href="tel:+254711353372">+254 711 353 372</a></li>
+<li><span class="mono">location</span>Ruaraka, Nairobi</li>
+<li><span class="mono">linkedin</span><a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">linkedin.com/in/your-username</a></li>
+<li><span class="mono">github</span><a href="https://github.com/your-username" target="_blank" rel="noopener">github.com/your-username</a></li>
+</ul>
+<form id="f">
+<label>Your name<input id="n" required></label>
+<label>Message<textarea id="m" rows="4" required></textarea></label>
+<button class="btn main" type="submit">Send message</button>
+</form>
+</div>
+</div></section>
+
+<footer>© <span id="y">2026</span> Sheril Aol. Built with HTML and CSS.</footer>
+
+<script>
+(function(){
+var w=["network admin","software developer","database manager","problem solver"],t=document.getElementById("typed"),i=0,j=0,d=false;
+document.getElementById("y").textContent=new Date().getFullYear();
+function tick(){var s=w[i];j+=d?-1:1;t.textContent=s.slice(0,j);var delay=d?40:80;
+if(!d&&j===s.length){d=true;delay=1400}else if(d&&j===0){d=false;i=(i+1)%w.length;delay=300}
+setTimeout(tick,delay)}
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){tick()}
+document.getElementById("f").addEventListener("submit",function(e){e.preventDefault();
+location.href="mailto:aolsheril98@gmail.com?subject="+encodeURIComponent("Portfolio message from "+document.getElementById("n").value)+"&body="+encodeURIComponent(document.getElementById("m").value)});
+document.querySelectorAll(".dz").forEach(function(z){
+var inp=z.querySelector("input"),ul=z.querySelector("ul");
+function add(fs){Array.prototype.forEach.call(fs,function(f){var li=document.createElement("li"),a=document.createElement("a");a.href=URL.createObjectURL(f);a.target="_blank";a.rel="noopener";a.textContent=f.name;li.appendChild(a);ul.appendChild(li)})}
+z.addEventListener("click",function(e){if(e.target.tagName!=="A"&&e.target!==inp){inp.click()}});
+z.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();inp.click()}});
+inp.addEventListener("change",function(){add(inp.files);inp.value=""});
+["dragenter","dragover"].forEach(function(t){z.addEventListener(t,function(e){e.preventDefault();z.classList.add("over")})});
+["dragleave","drop"].forEach(function(t){z.addEventListener(t,function(e){e.preventDefault();z.classList.remove("over")})});
+z.addEventListener("drop",function(e){add(e.dataTransfer.files)});
+});
+})();
+</script>
+</body>
+</html>
